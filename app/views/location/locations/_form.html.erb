@@ -1,0 +1,45 @@
+<%= form_for(@location_location) do |f| %>
+  <% if @location_location.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@location_location.errors.count, "error") %> prohibited this location_location from being saved:</h2>
+
+      <ul>
+      <% @location_location.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Laboratory_Department %><br>
+    <%= f.text_field :Laboratory_Department %>
+  </div>
+  <div class="field">
+    <%= f.label :Manager %><br>
+    <%= f.text_field :Manager %>
+  </div>
+  <div class="field">
+    <%= f.label :Mail %><br>
+    <%= f.text_field :Mail %>
+  </div>
+  <div class="field">
+    <%= f.label :id_User %><br>
+    <%= f.number_field :id_User %>
+  </div>
+  <div class="field">
+    <%= f.label :id_Equipment %><br>
+    <%= f.number_field :id_Equipment %>
+  </div>
+  <div class="field">
+    <%= f.label :id_Contract_type %><br>
+    <%= f.number_field :id_Contract_type %>
+  </div>
+  <div class="field">
+    <%= f.label :id_Supplier %><br>
+    <%= f.number_field :id_Supplier %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

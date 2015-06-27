@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Laboratory_Department: MyString
+  Manager: MyString
+  Mail: MyString
+  id_User: 1
+  id_Equipment: 1
+  id_Contract_type: 1
+  id_Supplier: 1
+
+two:
+  Laboratory_Department: MyString
+  Manager: MyString
+  Mail: MyString
+  id_User: 1
+  id_Equipment: 1
+  id_Contract_type: 1
+  id_Supplier: 1

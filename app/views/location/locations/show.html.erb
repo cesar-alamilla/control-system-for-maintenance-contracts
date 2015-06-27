@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Laboratory department:</strong>
+  <%= @location_location.Laboratory_Department %>
+</p>
+
+<p>
+  <strong>Manager:</strong>
+  <%= @location_location.Manager %>
+</p>
+
+<p>
+  <strong>Mail:</strong>
+  <%= @location_location.Mail %>
+</p>
+
+<p>
+  <strong>Id user:</strong>
+  <%= @location_location.id_User %>
+</p>
+
+<p>
+  <strong>Id equipment:</strong>
+  <%= @location_location.id_Equipment %>
+</p>
+
+<p>
+  <strong>Id contract type:</strong>
+  <%= @location_location.id_Contract_type %>
+</p>
+
+<p>
+  <strong>Id supplier:</strong>
+  <%= @location_location.id_Supplier %>
+</p>
+
+<%= link_to 'Edit', edit_location_location_path(@location_location) %> |
+<%= link_to 'Back', location_locations_path %>

@@ -1,0 +1,37 @@
+<%= form_for(@contract_type_contract_type) do |f| %>
+  <% if @contract_type_contract_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contract_type_contract_type.errors.count, "error") %> prohibited this contract_type_contract_type from being saved:</h2>
+
+      <ul>
+      <% @contract_type_contract_type.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Type %><br>
+    <%= f.text_field :Type %>
+  </div>
+  <div class="field">
+    <%= f.label :id_Supplier %><br>
+    <%= f.number_field :id_Supplier %>
+  </div>
+  <div class="field">
+    <%= f.label :id_Equipment %><br>
+    <%= f.number_field :id_Equipment %>
+  </div>
+  <div class="field">
+    <%= f.label :id_User %><br>
+    <%= f.number_field :id_User %>
+  </div>
+  <div class="field">
+    <%= f.label :id_location %><br>
+    <%= f.number_field :id_location %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

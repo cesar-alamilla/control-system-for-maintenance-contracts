@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Equipment Equipment</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Stock number</th>
+      <th>Location</th>
+      <th>Provider who maintains</th>
+      <th>Id user</th>
+      <th>Id supplier integer</th>
+      <th>Id contract type</th>
+      <th>Id location</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @equipment_equipment.each do |equipment_equipment| %>
+      <tr>
+        <td><%= equipment_equipment.Name %></td>
+        <td><%= equipment_equipment.Stock_number %></td>
+        <td><%= equipment_equipment.Location %></td>
+        <td><%= equipment_equipment.Provider_who_maintains %></td>
+        <td><%= equipment_equipment.id_user %></td>
+        <td><%= equipment_equipment.id_Supplier_integer %></td>
+        <td><%= equipment_equipment.id_Contract_type %></td>
+        <td><%= equipment_equipment.id_location %></td>
+        <td><%= link_to 'Show', equipment_equipment %></td>
+        <td><%= link_to 'Edit', edit_equipment_equipment_path(equipment_equipment) %></td>
+        <td><%= link_to 'Destroy', equipment_equipment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Equipment', new_equipment_equipment_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Type: MyString
+  id_Supplier: 1
+  id_Equipment: 1
+  id_User: 1
+  id_location: 1
+
+two:
+  Type: MyString
+  id_Supplier: 1
+  id_Equipment: 1
+  id_User: 1
+  id_location: 1
