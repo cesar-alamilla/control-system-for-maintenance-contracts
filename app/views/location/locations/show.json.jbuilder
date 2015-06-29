@@ -1,1 +1,1 @@
-json.extract! @location_location, :id, :Laboratory_Department, :Manager, :Mail, :id_User, :id_Equipment, :id_Contract_type, :id_Supplier, :created_at, :updated_at
+json.extract! @location_location, :id, :Laboratory_Department, :Manager, :Mail, :User_id, :Device_id, :Contract_type_id, :Supplier_id, :created_at, :updated_at

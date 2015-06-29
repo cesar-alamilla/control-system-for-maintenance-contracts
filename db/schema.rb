@@ -11,27 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150627064650) do
+ActiveRecord::Schema.define(version: 20150629070937) do
 
   create_table "contract_type_contract_types", force: :cascade do |t|
     t.string   "Type"
-    t.integer  "id_Supplier"
-    t.integer  "id_Equipment"
-    t.integer  "id_User"
-    t.integer  "id_location"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.string   "Supplier_id"
+    t.string   "Device_id"
+    t.string   "User_id"
+    t.string   "Location_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
-  create_table "equipment_equipment", force: :cascade do |t|
+  create_table "device_devices", force: :cascade do |t|
     t.string   "Name"
-    t.integer  "Stock_number"
+    t.string   "Stock_number"
     t.string   "Location"
     t.string   "Provider_who_maintains"
-    t.integer  "id_user"
-    t.string   "id_Supplier_integer"
-    t.integer  "id_Contract_type"
-    t.integer  "id_location"
+    t.string   "User_id"
+    t.string   "Supplier_id"
+    t.string   "Contract_type_id"
+    t.string   "Location_id"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
@@ -40,22 +40,10 @@ ActiveRecord::Schema.define(version: 20150627064650) do
     t.string   "Laboratory_Department"
     t.string   "Manager"
     t.string   "Mail"
-    t.integer  "id_User"
-    t.integer  "id_Equipment"
-    t.integer  "id_Contract_type"
-    t.integer  "id_Supplier"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
-  end
-
-  create_table "locations", force: :cascade do |t|
-    t.string   "Laboratory_Department"
-    t.string   "Manager"
-    t.string   "Mail"
-    t.integer  "id_User"
-    t.integer  "id_Equipment"
-    t.integer  "id_Contract_type"
-    t.integer  "id_Supplier"
+    t.string   "User_id"
+    t.string   "Device_id"
+    t.string   "Contract_type_id"
+    t.string   "Supplier_id"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
   end
@@ -65,10 +53,10 @@ ActiveRecord::Schema.define(version: 20150627064650) do
     t.string   "Contact"
     t.string   "Phone"
     t.string   "Mail"
-    t.integer  "id_User"
-    t.integer  "id_Equipment"
-    t.integer  "id_Contract_type"
-    t.integer  "id_Location"
+    t.string   "User_id"
+    t.string   "Device_id"
+    t.string   "Contract_type_id"
+    t.string   "Location_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
@@ -77,10 +65,10 @@ ActiveRecord::Schema.define(version: 20150627064650) do
     t.string   "Name"
     t.string   "Mail"
     t.string   "Login"
-    t.integer  "id_Supplier"
-    t.integer  "id_Equipment"
-    t.integer  "id_Contract_type"
-    t.integer  "id_Location"
+    t.string   "Supplier_id"
+    t.string   "Device_id"
+    t.string   "Contract_type_id"
+    t.string   "Location_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end

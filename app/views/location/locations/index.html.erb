@@ -8,10 +8,10 @@
       <th>Laboratory department</th>
       <th>Manager</th>
       <th>Mail</th>
-      <th>Id user</th>
-      <th>Id equipment</th>
-      <th>Id contract type</th>
-      <th>Id supplier</th>
+      <th>User</th>
+      <th>Device</th>
+      <th>Contract type</th>
+      <th>Supplier</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,10 +22,10 @@
         <td><%= location_location.Laboratory_Department %></td>
         <td><%= location_location.Manager %></td>
         <td><%= location_location.Mail %></td>
-        <td><%= location_location.id_User %></td>
-        <td><%= location_location.id_Equipment %></td>
-        <td><%= location_location.id_Contract_type %></td>
-        <td><%= location_location.id_Supplier %></td>
+        <td><%= location_location.User_id %></td>
+        <td><%= location_location.Device_id %></td>
+        <td><%= location_location.Contract_type_id %></td>
+        <td><%= location_location.Supplier_id %></td>
         <td><%= link_to 'Show', location_location %></td>
         <td><%= link_to 'Edit', edit_location_location_path(location_location) %></td>
         <td><%= link_to 'Destroy', location_location, method: :delete, data: { confirm: 'Are you sure?' } %></td>

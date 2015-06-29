@@ -18,7 +18,7 @@ class ContractType::ContractTypesControllerTest < ActionController::TestCase
 
   test "should create contract_type_contract_type" do
     assert_difference('ContractType::ContractType.count') do
-      post :create, contract_type_contract_type: { Type: @contract_type_contract_type.Type, id_Equipment: @contract_type_contract_type.id_Equipment, id_Supplier: @contract_type_contract_type.id_Supplier, id_User: @contract_type_contract_type.id_User, id_location: @contract_type_contract_type.id_location }
+      post :create, contract_type_contract_type: { Device_id: @contract_type_contract_type.Device_id, Location_id: @contract_type_contract_type.Location_id, Supplier_id: @contract_type_contract_type.Supplier_id, Type: @contract_type_contract_type.Type, User_id: @contract_type_contract_type.User_id }
     end
 
     assert_redirected_to contract_type_contract_type_path(assigns(:contract_type_contract_type))
@@ -35,7 +35,7 @@ class ContractType::ContractTypesControllerTest < ActionController::TestCase
   end
 
   test "should update contract_type_contract_type" do
-    patch :update, id: @contract_type_contract_type, contract_type_contract_type: { Type: @contract_type_contract_type.Type, id_Equipment: @contract_type_contract_type.id_Equipment, id_Supplier: @contract_type_contract_type.id_Supplier, id_User: @contract_type_contract_type.id_User, id_location: @contract_type_contract_type.id_location }
+    patch :update, id: @contract_type_contract_type, contract_type_contract_type: { Device_id: @contract_type_contract_type.Device_id, Location_id: @contract_type_contract_type.Location_id, Supplier_id: @contract_type_contract_type.Supplier_id, Type: @contract_type_contract_type.Type, User_id: @contract_type_contract_type.User_id }
     assert_redirected_to contract_type_contract_type_path(assigns(:contract_type_contract_type))
   end
 

@@ -2,14 +2,14 @@
 
 one:
   Type: MyString
-  id_Supplier: 1
-  id_Equipment: 1
-  id_User: 1
-  id_location: 1
+  Supplier_id: MyString
+  Device_id: MyString
+  User_id: MyString
+  Location_id: MyString
 
 two:
   Type: MyString
-  id_Supplier: 1
-  id_Equipment: 1
-  id_User: 1
-  id_location: 1
+  Supplier_id: MyString
+  Device_id: MyString
+  User_id: MyString
+  Location_id: MyString

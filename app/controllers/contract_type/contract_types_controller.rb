@@ -69,6 +69,6 @@ class ContractType::ContractTypesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def contract_type_contract_type_params
-      params.require(:contract_type_contract_type).permit(:Type, :id_Supplier, :id_Equipment, :id_User, :id_location)
+      params.require(:contract_type_contract_type).permit(:Type, :Supplier_id, :Device_id, :User_id, :Location_id)
     end
 end

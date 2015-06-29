@@ -8,10 +8,10 @@
       <th>Name</th>
       <th>Mail</th>
       <th>Login</th>
-      <th>Id supplier</th>
-      <th>Id equipment</th>
-      <th>Id contract type</th>
-      <th>Id location</th>
+      <th>Supplier</th>
+      <th>Device</th>
+      <th>Contract type</th>
+      <th>Location</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,10 +22,10 @@
         <td><%= user_user.Name %></td>
         <td><%= user_user.Mail %></td>
         <td><%= user_user.Login %></td>
-        <td><%= user_user.id_Supplier %></td>
-        <td><%= user_user.id_Equipment %></td>
-        <td><%= user_user.id_Contract_type %></td>
-        <td><%= user_user.id_Location %></td>
+        <td><%= user_user.Supplier_id %></td>
+        <td><%= user_user.Device_id %></td>
+        <td><%= user_user.Contract_type_id %></td>
+        <td><%= user_user.Location_id %></td>
         <td><%= link_to 'Show', user_user %></td>
         <td><%= link_to 'Edit', edit_user_user_path(user_user) %></td>
         <td><%= link_to 'Destroy', user_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -1,0 +1,2 @@
+module Device::DevicesHelper
+end

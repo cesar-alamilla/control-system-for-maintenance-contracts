@@ -5,17 +5,17 @@ one:
   Contact: MyString
   Phone: MyString
   Mail: MyString
-  id_User: 1
-  id_Equipment: 1
-  id_Contract_type: 1
-  id_Location: 1
+  User_id: MyString
+  Device_id: MyString
+  Contract_type_id: MyString
+  Location_id: MyString
 
 two:
   Bussines_name: MyString
   Contact: MyString
   Phone: MyString
   Mail: MyString
-  id_User: 1
-  id_Equipment: 1
-  id_Contract_type: 1
-  id_Location: 1
+  User_id: MyString
+  Device_id: MyString
+  Contract_type_id: MyString
+  Location_id: MyString

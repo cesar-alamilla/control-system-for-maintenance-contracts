@@ -1,1 +1,1 @@
-json.extract! @supplier_supplier, :id, :Bussines_name, :Contact, :Phone, :Mail, :id_User, :id_Equipment, :id_Contract_type, :id_Location, :created_at, :updated_at
+json.extract! @supplier_supplier, :id, :Bussines_name, :Contact, :Phone, :Mail, :User_id, :Device_id, :Contract_type_id, :Location_id, :created_at, :updated_at

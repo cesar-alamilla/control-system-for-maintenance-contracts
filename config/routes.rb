@@ -1,18 +1,18 @@
 Rails.application.routes.draw do
-  namespace :equipment do
-    resources :equipment
+  namespace :contract_type do
+    resources :contract_types
   end
   namespace :location do
     resources :locations
   end
-  namespace :contract_type do
-    resources :contract_types
+  namespace :user do
+    resources :users
+  end
+  namespace :device do
+    resources :devices
   end
   namespace :supplier do
     resources :suppliers
-  end
-  namespace :user do
-    resources :users
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -18,7 +18,7 @@ class Supplier::SuppliersControllerTest < ActionController::TestCase
 
   test "should create supplier_supplier" do
     assert_difference('Supplier::Supplier.count') do
-      post :create, supplier_supplier: { Bussines_name: @supplier_supplier.Bussines_name, Contact: @supplier_supplier.Contact, Mail: @supplier_supplier.Mail, Phone: @supplier_supplier.Phone, id_Contract_type: @supplier_supplier.id_Contract_type, id_Equipment: @supplier_supplier.id_Equipment, id_Location: @supplier_supplier.id_Location, id_User: @supplier_supplier.id_User }
+      post :create, supplier_supplier: { Bussines_name: @supplier_supplier.Bussines_name, Contact: @supplier_supplier.Contact, Contract_type_id: @supplier_supplier.Contract_type_id, Device_id: @supplier_supplier.Device_id, Location_id: @supplier_supplier.Location_id, Mail: @supplier_supplier.Mail, Phone: @supplier_supplier.Phone, User_id: @supplier_supplier.User_id }
     end
 
     assert_redirected_to supplier_supplier_path(assigns(:supplier_supplier))
@@ -35,7 +35,7 @@ class Supplier::SuppliersControllerTest < ActionController::TestCase
   end
 
   test "should update supplier_supplier" do
-    patch :update, id: @supplier_supplier, supplier_supplier: { Bussines_name: @supplier_supplier.Bussines_name, Contact: @supplier_supplier.Contact, Mail: @supplier_supplier.Mail, Phone: @supplier_supplier.Phone, id_Contract_type: @supplier_supplier.id_Contract_type, id_Equipment: @supplier_supplier.id_Equipment, id_Location: @supplier_supplier.id_Location, id_User: @supplier_supplier.id_User }
+    patch :update, id: @supplier_supplier, supplier_supplier: { Bussines_name: @supplier_supplier.Bussines_name, Contact: @supplier_supplier.Contact, Contract_type_id: @supplier_supplier.Contract_type_id, Device_id: @supplier_supplier.Device_id, Location_id: @supplier_supplier.Location_id, Mail: @supplier_supplier.Mail, Phone: @supplier_supplier.Phone, User_id: @supplier_supplier.User_id }
     assert_redirected_to supplier_supplier_path(assigns(:supplier_supplier))
   end
 

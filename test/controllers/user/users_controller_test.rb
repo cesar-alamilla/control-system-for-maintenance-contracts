@@ -18,7 +18,7 @@ class User::UsersControllerTest < ActionController::TestCase
 
   test "should create user_user" do
     assert_difference('User::User.count') do
-      post :create, user_user: { Login: @user_user.Login, Mail: @user_user.Mail, Name: @user_user.Name, id_Contract_type: @user_user.id_Contract_type, id_Equipment: @user_user.id_Equipment, id_Location: @user_user.id_Location, id_Supplier: @user_user.id_Supplier }
+      post :create, user_user: { Contract_type_id: @user_user.Contract_type_id, Device_id: @user_user.Device_id, Location_id: @user_user.Location_id, Login: @user_user.Login, Mail: @user_user.Mail, Name: @user_user.Name, Supplier_id: @user_user.Supplier_id }
     end
 
     assert_redirected_to user_user_path(assigns(:user_user))
@@ -35,7 +35,7 @@ class User::UsersControllerTest < ActionController::TestCase
   end
 
   test "should update user_user" do
-    patch :update, id: @user_user, user_user: { Login: @user_user.Login, Mail: @user_user.Mail, Name: @user_user.Name, id_Contract_type: @user_user.id_Contract_type, id_Equipment: @user_user.id_Equipment, id_Location: @user_user.id_Location, id_Supplier: @user_user.id_Supplier }
+    patch :update, id: @user_user, user_user: { Contract_type_id: @user_user.Contract_type_id, Device_id: @user_user.Device_id, Location_id: @user_user.Location_id, Login: @user_user.Login, Mail: @user_user.Mail, Name: @user_user.Name, Supplier_id: @user_user.Supplier_id }
     assert_redirected_to user_user_path(assigns(:user_user))
   end
 

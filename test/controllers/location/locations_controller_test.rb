@@ -18,7 +18,7 @@ class Location::LocationsControllerTest < ActionController::TestCase
 
   test "should create location_location" do
     assert_difference('Location::Location.count') do
-      post :create, location_location: { Laboratory_Department: @location_location.Laboratory_Department, Mail: @location_location.Mail, Manager: @location_location.Manager, id_Contract_type: @location_location.id_Contract_type, id_Equipment: @location_location.id_Equipment, id_Supplier: @location_location.id_Supplier, id_User: @location_location.id_User }
+      post :create, location_location: { Contract_type_id: @location_location.Contract_type_id, Device_id: @location_location.Device_id, Laboratory_Department: @location_location.Laboratory_Department, Mail: @location_location.Mail, Manager: @location_location.Manager, Supplier_id: @location_location.Supplier_id, User_id: @location_location.User_id }
     end
 
     assert_redirected_to location_location_path(assigns(:location_location))
@@ -35,7 +35,7 @@ class Location::LocationsControllerTest < ActionController::TestCase
   end
 
   test "should update location_location" do
-    patch :update, id: @location_location, location_location: { Laboratory_Department: @location_location.Laboratory_Department, Mail: @location_location.Mail, Manager: @location_location.Manager, id_Contract_type: @location_location.id_Contract_type, id_Equipment: @location_location.id_Equipment, id_Supplier: @location_location.id_Supplier, id_User: @location_location.id_User }
+    patch :update, id: @location_location, location_location: { Contract_type_id: @location_location.Contract_type_id, Device_id: @location_location.Device_id, Laboratory_Department: @location_location.Laboratory_Department, Mail: @location_location.Mail, Manager: @location_location.Manager, Supplier_id: @location_location.Supplier_id, User_id: @location_location.User_id }
     assert_redirected_to location_location_path(assigns(:location_location))
   end
 
