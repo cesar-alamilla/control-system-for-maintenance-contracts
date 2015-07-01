@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Laboratory_department: MyString
+  Manager: MyString
+  Mail: MyString
+  Device: MyString
+
+two:
+  Laboratory_department: MyString
+  Manager: MyString
+  Mail: MyString
+  Device: MyString

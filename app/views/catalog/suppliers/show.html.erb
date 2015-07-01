@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bussines name:</strong>
+  <%= @catalog_supplier.Bussines_name %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @catalog_supplier.Contact %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @catalog_supplier.Phone %>
+</p>
+
+<p>
+  <strong>Mail:</strong>
+  <%= @catalog_supplier.Mail %>
+</p>
+
+<p>
+  <strong>Contract type:</strong>
+  <%= @catalog_supplier.Contract_type_id %>
+</p>
+
+<%= link_to 'Edit', edit_catalog_supplier_path(@catalog_supplier) %> |
+<%= link_to 'Back', catalog_suppliers_path %>

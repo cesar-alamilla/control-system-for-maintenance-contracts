@@ -1,19 +1,20 @@
 Rails.application.routes.draw do
-  namespace :contract_type do
-    resources :contract_types
-  end
-  namespace :location do
+  namespace :catalog do
     resources :locations
   end
-  namespace :user do
-    resources :users
+  namespace :catalog do
+    resources :contract_types
   end
-  namespace :device do
+  namespace :catalog do
     resources :devices
   end
-  namespace :supplier do
+  namespace :catalog do
     resources :suppliers
   end
+  namespace :catalog do
+    resources :suppliers
+  end
+  devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -21,7 +22,7 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+  get 'sistema/log_out' => 'sistema#log_out'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

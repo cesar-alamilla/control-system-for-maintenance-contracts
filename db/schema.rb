@@ -11,66 +11,65 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150629070937) do
+ActiveRecord::Schema.define(version: 20150701132025) do
 
-  create_table "contract_type_contract_types", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "catalog_contract_types", force: :cascade do |t|
     t.string   "Type"
-    t.string   "Supplier_id"
-    t.string   "Device_id"
-    t.string   "User_id"
-    t.string   "Location_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "Supplier"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "device_devices", force: :cascade do |t|
+  create_table "catalog_devices", force: :cascade do |t|
     t.string   "Name"
-    t.string   "Stock_number"
+    t.integer  "Stock_number"
     t.string   "Location"
     t.string   "Provider_who_maintains"
     t.string   "User_id"
     t.string   "Supplier_id"
-    t.string   "Contract_type_id"
     t.string   "Location_id"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
 
-  create_table "location_locations", force: :cascade do |t|
-    t.string   "Laboratory_Department"
+  create_table "catalog_locations", force: :cascade do |t|
+    t.string   "Laboratory_department"
     t.string   "Manager"
     t.string   "Mail"
-    t.string   "User_id"
-    t.string   "Device_id"
-    t.string   "Contract_type_id"
-    t.string   "Supplier_id"
+    t.string   "Device"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
   end
 
-  create_table "supplier_suppliers", force: :cascade do |t|
+  create_table "catalog_suppliers", force: :cascade do |t|
     t.string   "Bussines_name"
     t.string   "Contact"
     t.string   "Phone"
     t.string   "Mail"
-    t.string   "User_id"
-    t.string   "Device_id"
     t.string   "Contract_type_id"
-    t.string   "Location_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
 
-  create_table "user_users", force: :cascade do |t|
-    t.string   "Name"
-    t.string   "Mail"
-    t.string   "Login"
-    t.string   "Supplier_id"
-    t.string   "Device_id"
-    t.string   "Contract_type_id"
-    t.string   "Location_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+  create_table "users", force: :cascade do |t|
+    t.string   "login",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.inet     "current_sign_in_ip"
+    t.inet     "last_sign_in_ip"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
+
+  add_index "users", ["login"], name: "index_users_on_login", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end

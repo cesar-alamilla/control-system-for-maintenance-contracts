@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Type: MyString
+  Supplier: MyString
+
+two:
+  Type: MyString
+  Supplier: MyString

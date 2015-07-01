@@ -1,0 +1,37 @@
+<%= form_for(@catalog_supplier) do |f| %>
+  <% if @catalog_supplier.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@catalog_supplier.errors.count, "error") %> prohibited this catalog_supplier from being saved:</h2>
+
+      <ul>
+      <% @catalog_supplier.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Bussines_name %><br>
+    <%= f.text_field :Bussines_name %>
+  </div>
+  <div class="field">
+    <%= f.label :Contact %><br>
+    <%= f.text_field :Contact %>
+  </div>
+  <div class="field">
+    <%= f.label :Phone %><br>
+    <%= f.text_field :Phone %>
+  </div>
+  <div class="field">
+    <%= f.label :Mail %><br>
+    <%= f.text_field :Mail %>
+  </div>
+  <div class="field">
+    <%= f.label :Contract_type_id %><br>
+    <%= f.text_field :Contract_type_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

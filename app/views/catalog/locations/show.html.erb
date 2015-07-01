@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Laboratory department:</strong>
+  <%= @catalog_location.Laboratory_department %>
+</p>
+
+<p>
+  <strong>Manager:</strong>
+  <%= @catalog_location.Manager %>
+</p>
+
+<p>
+  <strong>Mail:</strong>
+  <%= @catalog_location.Mail %>
+</p>
+
+<p>
+  <strong>Device:</strong>
+  <%= @catalog_location.Device %>
+</p>
+
+<%= link_to 'Edit', edit_catalog_location_path(@catalog_location) %> |
+<%= link_to 'Back', catalog_locations_path %>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Catalog Suppliers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Bussines name</th>
+      <th>Contact</th>
+      <th>Phone</th>
+      <th>Mail</th>
+      <th>Contract type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @catalog_suppliers.each do |catalog_supplier| %>
+      <tr>
+        <td><%= catalog_supplier.Bussines_name %></td>
+        <td><%= catalog_supplier.Contact %></td>
+        <td><%= catalog_supplier.Phone %></td>
+        <td><%= catalog_supplier.Mail %></td>
+        <td><%= catalog_supplier.Contract_type_id %></td>
+        <td><%= link_to 'Show', catalog_supplier %></td>
+        <td><%= link_to 'Edit', edit_catalog_supplier_path(catalog_supplier) %></td>
+        <td><%= link_to 'Destroy', catalog_supplier, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Supplier', new_catalog_supplier_path %>

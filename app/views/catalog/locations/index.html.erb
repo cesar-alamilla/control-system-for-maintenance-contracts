@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Catalog Locations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Laboratory department</th>
+      <th>Manager</th>
+      <th>Mail</th>
+      <th>Device</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @catalog_locations.each do |catalog_location| %>
+      <tr>
+        <td><%= catalog_location.Laboratory_department %></td>
+        <td><%= catalog_location.Manager %></td>
+        <td><%= catalog_location.Mail %></td>
+        <td><%= catalog_location.Device %></td>
+        <td><%= link_to 'Show', catalog_location %></td>
+        <td><%= link_to 'Edit', edit_catalog_location_path(catalog_location) %></td>
+        <td><%= link_to 'Destroy', catalog_location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Location', new_catalog_location_path %>

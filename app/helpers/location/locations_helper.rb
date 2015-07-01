@@ -1,2 +1,0 @@
-module Location::LocationsHelper
-end

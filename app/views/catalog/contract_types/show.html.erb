@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @catalog_contract_type.Type %>
+</p>
+
+<p>
+  <strong>Supplier:</strong>
+  <%= @catalog_contract_type.Supplier %>
+</p>
+
+<%= link_to 'Edit', edit_catalog_contract_type_path(@catalog_contract_type) %> |
+<%= link_to 'Back', catalog_contract_types_path %>

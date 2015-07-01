@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @catalog_device.Name %>
+</p>
+
+<p>
+  <strong>Stock number:</strong>
+  <%= @catalog_device.Stock_number %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @catalog_device.Location %>
+</p>
+
+<p>
+  <strong>Provider who maintains:</strong>
+  <%= @catalog_device.Provider_who_maintains %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @catalog_device.User_id %>
+</p>
+
+<p>
+  <strong>Supplier:</strong>
+  <%= @catalog_device.Supplier_id %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @catalog_device.Location_id %>
+</p>
+
+<%= link_to 'Edit', edit_catalog_device_path(@catalog_device) %> |
+<%= link_to 'Back', catalog_devices_path %>
